@@ -16,3 +16,12 @@ def euclid(a, b):
 
 gcd = euclid(a, b)
 print('最大公約数は',gcd)
+
+
+def euclid_2(gcd):
+    if gcd == 1:
+        return True
+    else:
+        return False
+
+print(euclid_2(gcd))
