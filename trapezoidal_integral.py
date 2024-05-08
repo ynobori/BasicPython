@@ -14,7 +14,7 @@ def f_3(x):
     return pi ** (1/2) * e ** (-1*(x)**2)
 
 
-def daikei(a = 0, b = 1, n = 100, f = 1):
+def daikei(f, a = 0, b = 1, n = 100):
     h = (b - a) / n
 
     s = 0
@@ -24,6 +24,6 @@ def daikei(a = 0, b = 1, n = 100, f = 1):
 
 
 
-print('(1)', daikei(0, pi / 2, 50, f_1))
-print('(2)', daikei(0, 1, 100, f_2))
-print('(3)', daikei(-100, 100, 1000, f_3))
+print('(1)', daikei(f_1, 0, pi / 2, 50))
+print('(2)', daikei(f_2, 0, 1, 100))
+print('(3)', daikei(f_3, -100, 100, 1000))
