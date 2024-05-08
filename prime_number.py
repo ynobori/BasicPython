@@ -7,19 +7,11 @@ n = float(n)
 def prime(n):
     if int(n) != n:
         return False
-    elif n <= 1:
+    if n <= 1:
         return False
-    else:
-        i = 2
-        while n > i:
-            if n % i == 0:
-                return False
-                break
-            elif i > n/2:
-                return True
-                break
-            else:
-                i += 1
 
-
+    for i in range(2,int(n)):
+        if n % i == 0:
+            return False
+    return True
 print(prime(n))

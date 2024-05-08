@@ -5,23 +5,19 @@ b = int(b)
 
 # TODO
 def euclid(a, b):
-    while True:
-        d = a % b
-        if d == 0:
-            return b
-            break
-        else:    
-            a = b
-            b = d
+    while b > 0:
+        a, b = b, a % b
+    return a
 
 gcd = euclid(a, b)
 print('最大公約数は',gcd)
 
 
-def euclid_2(gcd):
+def multiple_prime(a, b):
+    gcd = euclid(a, b)
     if gcd == 1:
         return True
     else:
         return False
 
-print(euclid_2(gcd))
+print(multiple_prime(a, b))

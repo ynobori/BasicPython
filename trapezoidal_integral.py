@@ -4,10 +4,6 @@ from math import sin, pi, e
 # >>> 0
 # -----------
 
-n = 100
-a = 0
-b = 1
-
 def f_1(x):
     return sin(x)
 
@@ -18,7 +14,7 @@ def f_3(x):
     return pi ** (1/2) * e ** (-1*(x)**2)
 
 
-def daikei(a, b, n, f):
+def daikei(a = 0, b = 1, n = 100, f = 1):
     h = (b - a) / n
 
     s = 0
