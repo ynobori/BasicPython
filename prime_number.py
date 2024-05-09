@@ -1,9 +1,9 @@
+
 n = input("nの値を入力: ")
 n = float(n)
 
 
 # TODO
-
 def prime(n):
     if int(n) != n:
         return False

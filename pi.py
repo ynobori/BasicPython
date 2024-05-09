@@ -4,4 +4,7 @@ text = """
 """
 
 # TODO
-
+text = text.replace(',','')
+text = text.replace('.','')
+text = list(map(len, text.split()))
+print("".join(map(str,text)))
