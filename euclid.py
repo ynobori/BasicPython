@@ -4,17 +4,20 @@ a = int(a)
 b = int(b)
 
 # TODO
-"""
-if a < b:
-    c = a
-    a = b
-    b = c
-"""
-while True:
-    d = a % b
-    if d == 0:
-        print('最大公約数は',b)
-        break
-    else:    
-        a = b
-        b = d
+def euclid(a, b):
+    while b > 0:
+        a, b = b, a % b
+    return a
+
+gcd = euclid(a, b)
+print('最大公約数は',gcd)
+
+
+def multiple_prime(a, b):
+    gcd = euclid(a, b)
+    if gcd == 1:
+        return True
+    else:
+        return False
+
+print(multiple_prime(a, b))
